@@ -1,0 +1,15 @@
+
+4
+down vote
+To run locally on Windows (I'm on Windows 10), I recommend adding the following to your package.json file.
+
+ "scripts": {
+    "test": "cd ./node_modules/karma/bin/ && karma start"
+  },
+Then from the command line, type npm run test
+
+I prefer to not install a cli globally for these kinds of tools and instead run them locally from my project using a script. This way I can quickly see what version is in the dev dependencies and don't have to worry about the global version being different from the local one.
+
+"devDependencies": {
+    "karma": "^1.4.0"
+ }
